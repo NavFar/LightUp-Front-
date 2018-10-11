@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimengModule } from './primeng.module'
 import { AppComponent } from './app.component';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     PrimengModule,
   ],
-  providers: [],
+  providers: [
+    MessageService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
