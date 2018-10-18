@@ -5,6 +5,7 @@ import { PrimengModule } from './primeng.module'
 import { AppComponent } from './app.component';
 import { MessageService } from 'primeng/api';
 import { LoginComponent } from './components/login/login.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     BrowserAnimationsModule,
     PrimengModule,
+    AppRoutingModule,
   ],
   providers: [
     MessageService,
