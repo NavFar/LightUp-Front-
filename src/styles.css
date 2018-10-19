@@ -21,7 +21,7 @@ body {
 
 .lampBanner {
   background-color: rgba(99, 113, 206, 0.75);
-  height: 40vh;
+  height: 45vh;
   border-radius: 15px;
   padding: 10px 15px 10px 15px;
   width: 100%;
@@ -59,7 +59,7 @@ button {
 
 tr {
   font-size: 1.25em;
-  height: 5vh !important;
+  height: 3vh !important;
 }
 
 td {
