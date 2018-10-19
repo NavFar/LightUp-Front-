@@ -1,3 +1,21 @@
-<p>
-  user works!
-</p>
+<app-main-container>
+  <div class="lampBanner">
+    <div class="titleBanner">
+      {{title}}
+    </div>
+    <div>
+      <input type="text" placeholder="نام" name="name" />
+    </div>
+    <div>
+      <input type="text" placeholder="نام کاربری" name="username" />
+    </div>
+    <div>
+      <input type="password" placeholder="رمزعبور" name="password" />
+    </div>
+    <div class="ui-g">
+      <div class="ui-g-6 ui-g-offset-3">
+        <button pButton icon="pi pi-user-plus" iconPos="left" type="button" label="افزودن کاربر" class="ui-button-raised ui-button-success"></button>
+      </div>
+    </div>
+  </div>
+</app-main-container>
