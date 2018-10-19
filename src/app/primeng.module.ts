@@ -4,6 +4,7 @@ import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { TableModule } from 'primeng/table';
     ToastModule,
     ButtonModule,
     TableModule,
+    DropdownModule,
   ],
   exports: [
     MessageModule,
@@ -19,6 +21,7 @@ import { TableModule } from 'primeng/table';
     ToastModule,
     ButtonModule,
     TableModule,
+    DropdownModule,
   ],
 })
 export class PrimengModule { }
