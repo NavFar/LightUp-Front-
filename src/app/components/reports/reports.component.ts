@@ -6,10 +6,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit {
+  cols: any[];
+  reports: any[];
+  tempReporst: any[];
+  loading: boolean;
+  totalRecords: number;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
   }
+  ngOnInit() {
+    this.loading = true;
+    this.reports = [];
+    this.cols = [
+      { field: 'date', header: 'تاریخ', width: '75%' },
+      { field: 'text', header: 'متن', width: '25%' },
+    ];
+    this.tempReporst = [
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+      { date: 'asdf', text: 'asdf', },
+    ];
+    this.totalRecords = this.tempReporst.length;
 
+  }
+  loadReports(event: LazyLoadEvent) {
+    this.loading = true;
+    console.log(event.first);
+    console.log(event.rows);
+    // this.reports = this.tempReporst.slice(event.first, event.first + event.rows)
+    setTimeout(() => {
+      if (this.tempReporst) {
+        this.reports = this.tempReporst.slice(event.first, (event.first + event.rows));
+        this.loading = false;
+      }
+    }, 1000);
+  }
 }
