@@ -1,6 +1,7 @@
 .loginButton {
-  font-size: 2vh !important;
+  font-size: 3vh;
   margin-top: 2vh;
-  margin-left: 43%;
+  margin-left: 35%;
+  width: 30%;
   padding: 2px 2px 2px 2px;
 }
