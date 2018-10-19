@@ -52,3 +52,7 @@ input[type=text]:focus, input[type=password]:focus {
   border-left: 0;
   outline-width: 0;
 }
+
+button {
+  color: black !important;
+}
