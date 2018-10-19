@@ -58,9 +58,16 @@ button {
 }
 
 tr {
+  font-size: 1.25em;
   height: 5vh !important;
 }
 
 td {
   text-align: center;
+  overflow: hidden;
+  ;
+}
+
+th {
+  font-weight: bolder;
 }
