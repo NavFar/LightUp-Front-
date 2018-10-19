@@ -7,12 +7,14 @@ import { MessageService } from 'primeng/api';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MainContainerComponent } from './components/main-container/main-container.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainContainerComponent
+    MainContainerComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
