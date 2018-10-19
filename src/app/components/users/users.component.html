@@ -1,7 +1,7 @@
 <app-main-container>
   <div class="lampBanner">
     <div class="titleBanner">
-      گزارش‌ها
+      افراد
     </div>
     <p-table [columns]="cols" [value]="users" [lazy]="true" (onLazyLoad)="loadUsers($event)" [paginator]="true" [rows]="3" [totalRecords]="totalRecords" [loading]="loading">
       <ng-template pTemplate="header" let-columns>
