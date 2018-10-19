@@ -10,6 +10,9 @@ import { MainContainerComponent } from './components/main-container/main-contain
 import { MenuComponent } from './components/menu/menu.component';
 import { SelfAccountComponent } from './components/self-account/self-account.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { UsersComponent } from './components/users/users.component';
+import { PatternsComponent } from './components/patterns/patterns.component';
+import { RoomsComponent } from './components/rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ReportsComponent } from './components/reports/reports.component';
     MenuComponent,
     SelfAccountComponent,
     ReportsComponent,
+    UsersComponent,
+    PatternsComponent,
+    RoomsComponent,
   ],
   imports: [
     BrowserModule,

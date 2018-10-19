@@ -18,4 +18,16 @@ export class MenuComponent implements OnInit {
   reports() {
     this.router.navigate(['/reports']);
   }
+  patterns() {
+    this.router.navigate(['/patterns']);
+
+  }
+  rooms() {
+    this.router.navigate(['/rooms']);
+
+  }
+  users() {
+    this.router.navigate(['/users']);
+
+  }
 }
