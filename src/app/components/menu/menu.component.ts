@@ -15,4 +15,7 @@ export class MenuComponent implements OnInit {
   selfAccount() {
     this.router.navigate(['/self']);
   }
+  reports() {
+    this.router.navigate(['/reports']);
+  }
 }

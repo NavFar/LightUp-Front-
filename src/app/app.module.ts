@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SelfAccountComponent } from './components/self-account/self-account.component';
+import { ReportsComponent } from './components/reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SelfAccountComponent } from './components/self-account/self-account.com
     MainContainerComponent,
     MenuComponent,
     SelfAccountComponent,
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,
