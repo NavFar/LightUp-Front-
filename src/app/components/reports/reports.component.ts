@@ -35,7 +35,7 @@ export class ReportsComponent implements OnInit {
     this.totalRecords = this.tempReporst.length;
 
   }
-  loadReports(event: LazyLoadEvent) {
+  loadReports(event) {
     this.loading = true;
     console.log(event.first);
     console.log(event.rows);
