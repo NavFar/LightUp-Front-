@@ -21,7 +21,8 @@ body {
 
 .lampBanner {
   background-color: rgba(99, 113, 206, 0.75);
-  height: 45vh;
+  min-height: 45vh;
+  height: auto;
   border-radius: 15px;
   padding: 10px 15px 10px 15px;
   width: 100%;
@@ -59,7 +60,7 @@ button {
 
 tr {
   font-size: 1.25em;
-  height: 3vh !important;
+  height: 2vh !important;
 }
 
 td {
@@ -70,4 +71,8 @@ td {
 
 th {
   font-weight: bolder;
+}
+
+.ui-table {
+  height: 20vh !important;
 }
