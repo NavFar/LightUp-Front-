@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SelfAccountComponent } from './components/self-account/self-account.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MenuComponent } from './components/menu/menu.component';
     LoginComponent,
     MainContainerComponent,
     MenuComponent,
+    SelfAccountComponent,
   ],
   imports: [
     BrowserModule,
