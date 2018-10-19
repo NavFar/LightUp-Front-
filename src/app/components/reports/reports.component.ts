@@ -19,8 +19,8 @@ export class ReportsComponent implements OnInit {
     this.loading = true;
     this.reports = [];
     this.cols = [
-      { field: 'date', header: 'تاریخ', width: '75%' },
-      { field: 'text', header: 'متن', width: '25%' },
+      { field: 'text', header: 'متن', width: '75%' },
+      { field: 'date', header: 'تاریخ', width: '25%' },
     ];
     this.tempReporst = [
       { date: 'asdf', text: 'asdf', },
