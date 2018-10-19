@@ -13,6 +13,9 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { UsersComponent } from './components/users/users.component';
 import { PatternsComponent } from './components/patterns/patterns.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
+import { PatternComponent } from './components/pattern/pattern.component';
+import { UserComponent } from './components/user/user.component';
+import { RoomComponent } from './components/room/room.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { RoomsComponent } from './components/rooms/rooms.component';
     UsersComponent,
     PatternsComponent,
     RoomsComponent,
+    PatternComponent,
+    UserComponent,
+    RoomComponent,
   ],
   imports: [
     BrowserModule,
