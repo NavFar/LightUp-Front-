@@ -1,3 +1,23 @@
-<p>
-  users works!
-</p>
+<app-main-container>
+  <div class="lampBanner">
+    <div class="titleBanner">
+      گزارش‌ها
+    </div>
+    <p-table [columns]="cols" [value]="users" [lazy]="true" (onLazyLoad)="loadUsers($event)" [paginator]="true" [rows]="3" [totalRecords]="totalRecords" [loading]="loading">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" [style.width]="col.width">
+            {{col.header}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">
+            {{rowData[col.field]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</app-main-container>
