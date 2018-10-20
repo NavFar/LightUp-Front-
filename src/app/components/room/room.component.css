@@ -1,0 +1,13 @@
+button {
+  width: 100%;
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+p-dropdown {
+  /*width: 80% !important;*/
+}
+
+label.ui-dropdown-label {
+  font-size: 20em;
+}
