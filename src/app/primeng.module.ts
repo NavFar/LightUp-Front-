@@ -5,6 +5,8 @@ import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { DialogModule } from 'primeng/dialog';
+import { InputMaskModule } from 'primeng/inputmask';
 
 @NgModule({
   imports: [
@@ -14,6 +16,8 @@ import { DropdownModule } from 'primeng/dropdown';
     ButtonModule,
     TableModule,
     DropdownModule,
+    DialogModule,
+    InputMaskModule,
   ],
   exports: [
     MessageModule,
@@ -22,6 +26,8 @@ import { DropdownModule } from 'primeng/dropdown';
     ButtonModule,
     TableModule,
     DropdownModule,
+    DialogModule,
+    InputMaskModule,
   ],
 })
 export class PrimengModule { }
