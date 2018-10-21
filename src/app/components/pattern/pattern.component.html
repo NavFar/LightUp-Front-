@@ -1,3 +1,21 @@
-<p>
-  pattern works!
-</p>
+<app-main-container>
+  <div class="lampBanner">
+    <div class="titleBanner">
+      {{title}}
+    </div>
+    <div>
+      <input dir="rtl" type="text" placeholder=" نام الگو" name="roomName" />
+    </div>
+    <div *ngFor="let room of rooms" class="ui-g">
+      <div class="ui-g-6 ">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">Lux </span>
+          <input type="text" pInputText placeholder="مقدار" [(value)]=room.value>
+        </div>
+      </div>
+      <div class="ui-g-4 ui-g-offset-2  roomTitle">
+        {{room.name}}
+      </div>
+    </div>
+  </div>
+</app-main-container>
