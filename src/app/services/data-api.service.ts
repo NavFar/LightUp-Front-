@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-// const prefix = "http://127.0.0.1:8000";
-const baseURL = "http://127.0.0.1:3000";
+// const baseURL = "http://127.0.0.1:3000";
+const baseURL = "";
 const prefix = "/api/";
 const routes = {
   login: baseURL + prefix + 'user/login',
