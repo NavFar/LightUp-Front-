@@ -4,13 +4,13 @@
       ورود
     </div>
     <div>
-      <input type="text" placeholder="نام کاربری" name="username" />
+      <input type="text" placeholder="نام کاربری" name="username" [(ngModel)]="username" />
     </div>
     <div>
-      <input type="password" placeholder="رمز عبور" name="password" />
+      <input type="password" placeholder="رمز عبور" name="password" [(ngModel)]="password" />
     </div>
     <div>
-      <button pButton type="button" icon="pi pi-sign-in" iconPos="left" label="ورود" class="ui-button-raised ui-button-success loginButton"></button>
+      <button pButton type="button" icon="pi pi-sign-in" iconPos="left" label="ورود" class="ui-button-raised ui-button-success loginButton" (click)="login()"></button>
     </div>
   </div>
 </app-main-container>
