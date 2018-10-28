@@ -1,17 +1,29 @@
 <app-main-container>
+  <p-dialog header="تغییر رمز عبور" [(visible)]="display" [modal]="true" [responsive]="true" [width]="350" [minWidth]="200" [minY]="70" [baseZIndex]="10000">
+    <input type="text" placeholder="رمز قبلی" name="name" [(ngModel)]="oldpassword" />
+    <input type="text" placeholder="رمز جدید" name="name" [(ngModel)]="newpassword1" />
+    <input type="text" placeholder="تکرار رمز جدید" name="name" [(ngModel)]="newpassword2" />
+
+    <p-footer>
+      <button type="button" pButton icon="pi pi-check" (click)="submit()" class="ui-button-raised ui-button-success" label="ثبت"></button>
+    </p-footer>
+  </p-dialog>
   <div class="lampBanner">
+    <div class="topButton">
+      <button pButton type="button" class="ui-button-primary floatLeft  " label="منو" (click)="back()"></button>
+    </div>
     <div class="titleBanner">
       حساب من
     </div>
     <div>
-      <input type="text" placeholder="نام کاربری" name="username" />
+      <input type="text" placeholder="نام کاربری" name="username" [(ngModel)]="username" [disabled]="true" />
     </div>
     <div>
-      <input type="text" placeholder="نام" name="name" />
+      <input type="text" placeholder="نام" name="name" [(ngModel)]="name" [disabled]="true" />
     </div>
     <div class="ui-g">
       <div class="ui-g-6 ui-g-offset-3">
-        <button pButton icon="pi pi-key" iconPos="left" type="button" label="تغییر کلمه عبور" class="ui-button-raised ui-button-warning"></button>
+        <button pButton icon="pi pi-key" iconPos="left" type="button" label="تغییر کلمه عبور" class="ui-button-raised ui-button-warning" (click)="display=true;"></button>
       </div>
     </div>
   </div>

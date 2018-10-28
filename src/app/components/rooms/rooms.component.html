@@ -1,9 +1,23 @@
 <app-main-container>
+  <p-dialog class="dialogContent" header="انتخاب کنید." [(visible)]="display" [baseZIndex]="10000" [minWidth]="250" [modal]="true" [dismissableMask]="true" [responsive]="true" class="ui-rtl" dir="rtl">
+    <div>
+      عمل خود را انتخاب کنید.
+    </div>
+    <p-footer>
+      <!-- <button pButton type="button" class="ui-button-warning  " label="ویرایش" (click)="edit()"></button> -->
+      <button pButton type="button" class="ui-button-danger  " label="حذف" (click)="remove()"></button>
+    </p-footer>
+
+  </p-dialog>
   <div class="lampBanner">
+    <div class="topButton">
+      <button pButton type="button" class="ui-button-primary floatLeft  " label="منو" (click)="back()"></button>
+      <button pButton type="button" class="ui-button-success  floatRight " label="افزودن فضا" (click)="addRoom()"></button>
+    </div>
     <div class="titleBanner">
       فضا‌ها
     </div>
-    <p-table [columns]="cols" [value]="rooms" [lazy]="true" (onLazyLoad)="loadRooms($event)" [paginator]="true" [rows]="3" [totalRecords]="totalRecords" [loading]="loading">
+    <p-table [columns]="cols" [value]="rooms" [lazy]="true" (onLazyLoad)="loadRooms($event)" [paginator]="true" [rows]="3" [totalRecords]="totalRecords" [loading]="loading" selectionMode="single" [(selection)]="data">
       <ng-template pTemplate="header" let-columns>
         <tr>
           <th *ngFor="let col of columns" [style.width]="col.width">
@@ -12,7 +26,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-rowData let-columns="columns">
-        <tr>
+        <tr (click)="onRowSelect($event,rowData)">
           <td *ngFor="let col of columns">
             {{rowData[col.field]}}
           </td>

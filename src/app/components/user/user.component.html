@@ -1,20 +1,23 @@
 <app-main-container>
   <div class="lampBanner">
+    <div class="topButton">
+      <button pButton type="button" class="ui-button-primary floatLeft  " label="منو" (click)="back()"></button>
+    </div>
     <div class="titleBanner">
       {{title}}
     </div>
     <div>
-      <input type="text" placeholder="نام" name="name" />
+      <input type="text" placeholder="نام" name="name" [(ngModel)]="name" />
     </div>
     <div>
-      <input type="text" placeholder="نام کاربری" name="username" />
+      <input type="text" placeholder="نام کاربری" name="username" [(ngModel)]="username" />
     </div>
     <div>
-      <input type="password" placeholder="رمزعبور" name="password" />
+      <input type="password" placeholder="رمزعبور" name="password" [(ngModel)]="password" />
     </div>
     <div class="ui-g">
       <div class="ui-g-6 ui-g-offset-3">
-        <button pButton icon="pi pi-user-plus" iconPos="left" type="button" label="افزودن کاربر" class="ui-button-raised ui-button-success"></button>
+        <button (click)="submit()" pButton icon="pi pi-user-plus" iconPos="left" type="button" label="افزودن کاربر" class="ui-button-raised ui-button-success"></button>
       </div>
     </div>
   </div>

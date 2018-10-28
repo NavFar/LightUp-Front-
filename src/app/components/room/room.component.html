@@ -1,10 +1,13 @@
 <app-main-container>
   <div class="lampBanner">
+    <div class="topButton">
+      <button pButton type="button" class="ui-button-primary floatLeft  " label="منو" (click)="back()"></button>
+    </div>
     <div class="titleBanner">
       {{title}}
     </div>
     <div>
-      <input dir="rtl" type="text" placeholder=" نام فضا" name="roomName" />
+      <input dir="rtl" type="text" placeholder=" نام فضا" name="roomName" [(ngModel)]="name" />
     </div>
     <div class="ui-g">
       <div class="ui-g-4">
@@ -25,7 +28,7 @@
 
     <div class="ui-g">
       <div class="ui-g-6 ui-g-offset-3">
-        <button pButton icon="pi pi-plus" iconPos="left" type="button" label="افزودن فضا" class="ui-button-raised ui-button-success"></button>
+        <button (click)="submit()" pButton icon="pi pi-plus" iconPos="left" type="button" label="افزودن فضا" class="ui-button-raised ui-button-success"></button>
       </div>
     </div>
   </div>

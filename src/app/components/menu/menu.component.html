@@ -3,7 +3,7 @@
     <div class="titleBanner">
       LightUp
     </div>
-    <div class="ui-g">
+    <div class="ui-g" *ngIf="admin">
       <div class="ui-g-4">
         <button (click)="reports()" pButton type="button" label="گزارش‌ها" class="ui-button-raised ui-button-warning"></button>
       </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="ui-g">
       <div class="ui-g-6 ui-g-offset-3">
-        <button pButton icon="pi pi-sign-out" iconPos="left" type="button" label="خروج" class="ui-button-raised ui-button-danger"></button>
+        <button (click)="exit()" pButton icon="pi pi-sign-out" iconPos="left" type="button" label="خروج" class="ui-button-raised ui-button-danger"></button>
       </div>
     </div>
   </div>

@@ -16,5 +16,16 @@ label.ui-dropdown-label {
   text-align: center;
   font-size: 1.2em;
   vertical-align: middle;
-  padding-top: 2vh;
+  padding-top: 5vh;
+}
+
+input[type=number] {
+  text-align: center;
+}
+
+.ui-inputgroup-addon {
+  background: none !important;
+  border: none !important;
+  color: black !important;
+  padding-top: 3vh !important;
 }

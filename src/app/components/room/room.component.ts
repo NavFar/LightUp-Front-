@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DataApiService } from '../../services/data-api.service';
+import { Message } from 'primeng/components/common/api';
+import { MessageService } from 'primeng/components/common/messageservice';
 import { SelectItem } from 'primeng/api';
 
 @Component({
@@ -14,7 +18,8 @@ export class RoomComponent implements OnInit {
   outputPort: string;
   inputType: string;
   outputType: string;
-  constructor() { }
+  name: string;
+  constructor(private route: ActivatedRoute, private router: Router, private dataApiService: DataApiService, private messageService: MessageService) { }
 
   ngOnInit() {
     this.types = [{ label: 'مستقیم', value: "1" },];
@@ -63,5 +68,50 @@ export class RoomComponent implements OnInit {
 
     this.title = "افزودن فضا"
   }
+  back() {
+    this.router.navigate(['/rooms']);
+  }
+  submit() {
+    if (!this.name) {
+      this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم ثبت', detail: 'نام نباید خالی باشد.' });
+      return;
+    }
+    if (!this.inputType) {
+      this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم ثبت', detail: 'نوع ورودی نباید خالی باشد.' });
+      return;
+    }
+    if (!this.inputPort) {
+      this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم ثبت', detail: 'پورت ورودی نباید خالی باشد.' });
+      return;
+    }
+    if (!this.outputType) {
+      this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم ثبت', detail: ' نوع خروجی نباید خالی باشد.' });
+      return;
+    }
+    if (!this.outputPort) {
+      this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم ثبت', detail: 'پورت خروجی نباید خالی باشد.' });
+      return;
+    }
+    this.dataApiService.addRoom(this.name, this.inputPort, this.inputType, this.outputPort, this.outputType).subscribe(
+      (response) => {
+        this.messageService.add({ key: 'message', severity: 'success', summary: 'ثبت', detail: 'فضا ثبت شد.' });
+        this.router.navigate(['/rooms']);
+      },
+      (error) => {
+        if (error.status == 401) {
+          this.messageService.add({ key: 'message', severity: 'warn', summary: 'عدم تایید هویت', detail: 'هویت شما تایید نشده است.' })
+          this.router.navigate(['/login']);
+          return;
+        }
+        if (error.status == 403) {
+          this.messageService.add({ key: 'message', severity: 'warn', summary: 'مشکل سطح دسترسی', detail: 'شما اجازه دسترسی به این بخش را ندارید.' })
+          this.router.navigate(['/menu']);
+          return;
+        }
+        this.messageService.add({ key: 'message', severity: 'error', summary: 'مشکل', detail: 'مشکلی پیش امده' })
+        this.router.navigate(['/login']);
+      }
 
+    );
+  }
 }
