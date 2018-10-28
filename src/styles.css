@@ -24,12 +24,31 @@ body {
   min-height: 45vh;
   height: auto;
   border-radius: 15px;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 2% 10px 2%;
   width: 100%;
   margin-top: 40vh;
+  position: relative;
 }
 
-input[type=text], input[type=password] {
+.topButton {
+  margin-top: 2vh;
+  width: 96%;
+  position: absolute;
+  height: 4vh;
+  /*margin: auto;*/
+}
+
+.floatLeft {
+  float: left;
+  max-width: 30%;
+}
+
+.floatRight {
+  float: right;
+  max-width: 40%;
+}
+
+input[type=text], input[type=password], input[type=number] {
   border-bottom: 0.25vh solid green;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -45,7 +64,7 @@ input[type=text], input[type=password] {
   transition-duration: 2s;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
   border-bottom: 0.75vh solid green;
   transition-duration: 1s;
   border-top: 0;
