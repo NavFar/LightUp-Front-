@@ -17,7 +17,8 @@ import { RoomsComponent } from './components/rooms/rooms.component';
 import { PatternComponent } from './components/pattern/pattern.component';
 import { UserComponent } from './components/user/user.component';
 import { RoomComponent } from './components/room/room.component';
-
+import { DataApiService } from './services/data-api.service'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,9 +40,11 @@ import { RoomComponent } from './components/room/room.component';
     BrowserAnimationsModule,
     PrimengModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     MessageService,
+    DataApiService,
   ],
   bootstrap: [AppComponent]
 })
